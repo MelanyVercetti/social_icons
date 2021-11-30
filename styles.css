@@ -1,0 +1,83 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: 100vh;
+    }
+    
+    .social_net {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .social_net__icon {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        background-color: #f2f2f2;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px #000080;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .social_net__icon i {
+        font-size: 26px;
+        color: rgb(43, 42, 42);
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+    
+    .social_net__icon::after {
+        content: '';
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        transform: translate(0, 70px);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    
+    .social_net__icon.facebook::after {
+        background-color: #3b5998;
+    }
+    
+    .social_net__icon.instagram::after {
+        background-color: rgb(253, 61, 180);
+    }
+    
+    .social_net__icon.linkedin::after {
+        background-color: #0e76a8;
+    }
+    
+    .social_net__icon.twitter::after {
+        background-color: #00acee;
+    }
+    
+    .social_net__icon.youtube::after {
+        background-color: rgb(255, 46, 46);
+    }
+    
+    .social_net__icon:hover {
+        transform: translateY(-4px);
+        box-shadow: 0px 0px 15px #000080;
+    }
+    
+    .social_net__icon:hover::after {
+        transform: translate(0);
+    }
